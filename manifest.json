@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Default Audio to English",
+  "description": "Automatically sets audio track to English on YouTube if available",
+  "version": "1.0",
+  "author": "YouTube Audio Extension",
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YouTube Audio to English"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  
+  "permissions": [
+    "scripting",
+    "tabs",
+    "storage"
+  ],
+  
+  "host_permissions": [
+    "*://www.youtube.com/*"
+  ]
+} 
