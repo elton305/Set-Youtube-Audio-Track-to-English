@@ -1,0 +1,22 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Chrome extension junk
+*.zip
+*.crx
+
+# Logs
+*.log
+
+# Node modules (if you add tooling later)
+node_modules/
+
+# Build artifacts
+dist/
+build/
+
+# Misc
+.env
+*.bak
+*.swp
